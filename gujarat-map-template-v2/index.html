@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gujarat Geothermal Demo Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="header">Gujarat Geothermal Demo Map</div>
+    <div id="map"></div>
+    <div id="panel">
+      <h3>Project Suitability (demo)</h3>
+      <ul>
+        <li>Resource (gradient): High / Medium / Low</li>
+        <li>Grid access (distance to 132 kV): Basic / Med / Adv</li>
+        <li>Water availability: Basic / Med / Adv</li>
+        <li>Drilling feasibility: Basic / Med / Adv</li>
+        <li>Market (power/heat): Basic / Med / Adv</li>
+      </ul>
+      <p class="note">Illustration only. Replace the GeoJSONs in <code>/data</code> with your exports.</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="./script.js"></script>
+</body>
+</html>

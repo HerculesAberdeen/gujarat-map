@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "Gujarat Cities",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "Name": "AHMEDABAD" }, "geometry": { "type": "Point", "coordinates": [ 72.585078408098184, 23.033266646405124 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "Name": "VADODARA" }, "geometry": { "type": "Point", "coordinates": [ 73.202024106142488, 22.300892398404145 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "Name": "RAJKOT" }, "geometry": { "type": "Point", "coordinates": [ 70.817827505313218, 22.296912103578052 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "Name": "JAMNAGAR" }, "geometry": { "type": "Point", "coordinates": [ 70.097394141790488, 22.436222422491284 ] } },
+{ "type": "Feature", "properties": { "fid": 5, "Name": "BHAVNAGAR" }, "geometry": { "type": "Point", "coordinates": [ 72.150728735200857, 21.762806291601791 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "Name": "SURAT" }, "geometry": { "type": "Point", "coordinates": [ 72.834608864431203, 21.193365283285981 ] } }
+]
+}
