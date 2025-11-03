@@ -36,16 +36,16 @@ function loadPoints(url, markerStyle, name, popupFields=[]) {
 }
 
 Promise.all([
-  loadPolygon('./data/gujarat_boundary.geojson', styleBoundary, 'Gujarat Boundary'),
-  loadPolygon('./data/gradient_zones.geojson', styleGradient, 'Gradient Zones'),
-  loadPoints('./data/substations_132kv.geojson', styleSS, '132 kV Substations', ['name','voltage_kv']),
-  loadPolygon('./data/transmission_lines.geojson', styleLines, 'Transmission Lines'),
-  loadPoints('./data/cities.geojson', styleCity, 'Cities', ['name']),
-  loadPoints('./data/hot_springs.geojson', styleHot, 'Hot Springs', ['name'])
+  // Your actual files
+  loadPolygon('./data/Gujarat Boundry.geojson', styleBoundary, 'Gujarat Boundary'),
+  loadPoints('./data/132Kv Sub Stations.geojson', styleSS, '132 kV Substations', ['name','voltage_kv']),
+  loadPoints('./data/220KV Sub Stations.geojson', styleSS, '220 kV Substations', ['name','voltage_kv']),
+  loadPoints('./data/Geothermal Wells.geojson', styleHot, 'Geothermal Wells', ['name']),
+  loadPoints('./data/Gujarat Cities.geojson', styleCity, 'Cities', ['name'])
 ]).then(layers => {
   const boundary = layers[0];
   if (boundary) {
-    try { map.fitBounds(boundary.getBounds(), { padding: [20,20] }); } catch(e) {}
+    try { map.fitBounds(boundary.getBounds(), { padding: [20,20] }); } catch (e) {}
   } else {
     const group = L.featureGroup(layers.filter(Boolean));
     if (group.getLayers().length) map.fitBounds(group.getBounds(), { padding: [20,20] });
@@ -55,3 +55,4 @@ Promise.all([
   console.error('Error loading layers:', err);
   alert('Could not load one or more layers. Check file names and paths in /data.');
 });
+
